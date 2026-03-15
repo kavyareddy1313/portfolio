@@ -11,9 +11,23 @@ import pythonProjectImg from '../assets/projects/python-project.png';
 // Data from resume
 const projects = [
   {
+    title: 'Movie Booking Application',
+    duration: 'Feb 2026',
+    description: 'A sophisticated React-based cinema platform where users register to browse available films, filter by city and venue, and securely book seats for specific date and time slots.',
+    tags: [
+      { name: 'React.js', class: 'tag-react' },
+      { name: 'JavaScript', class: 'tag-js' },
+      { name: 'CSS', class: 'tag-css' },
+      { name: 'Vercel', class: 'tag-devops' }
+    ],
+    image: movieBookingImg,
+    liveLink: 'https://movie-booking-application-kappa.vercel.app/register',
+    githubLink: 'https://github.com/kavyareddy1313/movie-booking-application'
+  },
+  {
     title: 'Food Express - MERN Stack Food Delivery',
     duration: 'Feb 2026',
-    description: 'An end-to-end ecosystem for local restaurant discovery, featuring secure order tracking and distinct control panels for both vendors and customers.',
+    description: 'A dual-dashboard MERN application featuring specialized administrative controls for restaurant management and order tracking, alongside a streamlined user interface for menu browsing and cart management.',
     tags: [
       { name: 'React.js', class: 'tag-react' },
       { name: 'Node.js', class: 'tag-node' },
@@ -26,23 +40,9 @@ const projects = [
     githubLink: 'https://github.com/kavyareddy1313/FoodExpress'
   },
   {
-    title: 'Movie Booking Application',
-    duration: 'Feb 2026',
-    description: 'A digital cinema hub for movie browsing and seat reservation, optimized for high-availability deployments and smooth reservation workflows.',
-    tags: [
-      { name: 'React.js', class: 'tag-react' },
-      { name: 'JavaScript', class: 'tag-js' },
-      { name: 'CSS', class: 'tag-css' },
-      { name: 'Vercel', class: 'tag-devops' }
-    ],
-    image: movieBookingImg,
-    liveLink: 'https://movie-booking-application-kappa.vercel.app/register',
-    githubLink: 'https://github.com/kavyareddy1313/movie-booking-application'
-  },
-  {
     title: 'GUI-based Product Search & Sort',
     duration: 'Jun 2025 - Jul 2025',
-    description: 'A local database utility for product inventory, supporting bulk CSV operations and advanced multi-criteria sorting filters.',
+    description: 'A Python-based product management utility leveraging Tkinter and SQLite for multi-criteria search and sorting, CRUD operations, and automated CSV data exportation.',
     tags: [
       { name: 'Python', class: 'tag-python' },
       { name: 'Tkinter', class: 'tag-gui' },
@@ -51,7 +51,7 @@ const projects = [
     ],
     image: pythonProjectImg,
     liveLink: '#',
-    githubLink: 'https://github.com/kavyareddy1313/python-project'
+    githubLink: 'https://github.com/kavyareddy1313/PYTHON-new-project'
   }
 ];
 
