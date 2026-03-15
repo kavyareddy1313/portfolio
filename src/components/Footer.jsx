@@ -1,0 +1,24 @@
+import React from 'react';
+import './Footer.css';
+
+const Footer = () => {
+  return (
+    <footer className="footer auto-container">
+      <div className="container">
+        <div className="footer-content">
+          <p className="copyright">
+            © {new Date().getFullYear()} Kavyasri Gujjula. All rights reserved.
+          </p>
+          <div className="footer-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

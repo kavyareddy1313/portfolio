@@ -1,0 +1,67 @@
+.bg-effects {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  background-color: var(--bg-primary);
+}
+
+.aurora-glow {
+  position: absolute;
+  filter: blur(120px);
+  opacity: 0.15;
+  border-radius: 50%;
+  mix-blend-mode: screen;
+}
+
+.glow-1 {
+  width: 600px;
+  height: 600px;
+  top: -100px;
+  right: -100px;
+  background: radial-gradient(circle, var(--accent-primary) 0%, transparent 70%);
+  animation: move-glow-1 25s infinite alternate ease-in-out;
+}
+
+.glow-2 {
+  width: 500px;
+  height: 500px;
+  bottom: 10%;
+  left: -100px;
+  background: radial-gradient(circle, var(--accent-secondary) 0%, transparent 70%);
+  animation: move-glow-2 30s infinite alternate ease-in-out;
+}
+
+.glow-3 {
+  width: 400px;
+  height: 400px;
+  top: 40%;
+  right: 15%;
+  background: radial-gradient(circle, #3b82f6 0%, transparent 70%);
+  animation: move-glow-3 20s infinite alternate ease-in-out;
+}
+
+.bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  mask-image: radial-gradient(circle at center, black, transparent 80%);
+}
+
+@keyframes move-glow-1 {
+  from { transform: translate(0, 0) scale(1); }
+  to { transform: translate(-20%, 20%) scale(1.2); }
+}
+
+@keyframes move-glow-2 {
+  from { transform: translate(0, 0) rotate(0deg); }
+  to { transform: translate(30%, -10%) rotate(180deg); }
+}
+
+@keyframes move-glow-3 {
+  from { transform: translate(0, 0) scale(1.1); }
+  to { transform: translate(-15%, -30%) scale(0.9); }
+}

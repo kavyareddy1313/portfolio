@@ -1,0 +1,208 @@
+.extracurricular {
+  position: relative;
+}
+
+.hackathon-focus {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.activity-card {
+  display: flex;
+  flex-direction: row;
+  height: 400px;
+  padding: 0;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+  border: 1px solid var(--glass-border);
+}
+
+.activity-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent-secondary);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.activity-img-wrapper {
+  flex: 1;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  background: white; 
+}
+
+.activity-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform var(--transition-slow);
+}
+
+.activity-card:hover .activity-img {
+  transform: scale(1.05);
+}
+
+.activity-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+  z-index: 5;
+}
+
+.activity-card:hover .activity-overlay {
+  opacity: 1;
+}
+
+.zoom-text {
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.activity-content {
+  flex: 1;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  background: var(--glass-bg);
+  z-index: 2;
+}
+
+.activity-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.activity-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.activity-organizer {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.duration-tag {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent-primary);
+  align-self: flex-start;
+  border-radius: 20px;
+}
+
+.activity-description {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.achievement-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.25rem;
+  background: rgba(139, 92, 246, 0.05);
+  border-radius: 12px;
+  align-self: flex-start;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Modal Styles with Professional Crop */
+.extra-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.95);
+  z-index: 2500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.extra-modal-container {
+  position: relative;
+  width: 90%;
+  max-width: 1000px;
+  overflow: hidden;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 0 50px rgba(0,0,0,0.8);
+}
+
+.cropped-cert-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.extra-modal-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.extra-modal-close {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10;
+}
+
+.extra-modal-close:hover {
+  color: var(--accent-secondary);
+  transform: scale(1.2);
+}
+
+@media (max-width: 900px) {
+  .activity-card {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .activity-img-wrapper {
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .activity-content {
+    padding: 2rem;
+  }
+  
+  .activity-title {
+    font-size: 1.5rem;
+  }
+  
+  .extra-modal-close {
+    top: -50px;
+    right: 0;
+  }
+  
+  .extra-modal-image {
+    width: 200%; /* More aggressive cropping on mobile if needed */
+  }
+}
