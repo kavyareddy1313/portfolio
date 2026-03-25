@@ -38,7 +38,7 @@ const Education = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="section-title">
-            <span className="gradient-text">Education</span> & Resume
+            <span className="gradient-text">Education</span>
           </h2>
           <div className="section-line"></div>
         </motion.div>
@@ -70,31 +70,6 @@ const Education = () => {
               </motion.div>
             ))}
           </div>
-
-          {/* Resume Download Section */}
-          <motion.div 
-            className="resume-section glass-panel"
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-          >
-            <div className="resume-content">
-              <h3>Hire Me for Your Next Project</h3>
-              <p>
-                Are you a recruiter looking for a passionate and dedicated Full Stack Developer & DevOps Engineer? 
-                Download my complete resume to see my full qualifications, projects, and professional background.
-              </p>
-              
-              <a href="/kavyacv .PES1.pdf" download="Kavyasri_Gujjula_Resume.pdf" className="download-btn">
-                <Download size={20} />
-                <span>Download Resume</span>
-              </a>
-            </div>
-            
-            {/* Decorative elements */}
-            <div className="resume-glow"></div>
-          </motion.div>
         </div>
 
       </div>

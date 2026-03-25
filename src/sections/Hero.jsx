@@ -50,16 +50,17 @@ const Hero = () => {
             <div className="hero-actions">
               <a href="#projects" className="primary-btn">View My Work</a>
               <a href="/resume.pdf" target="_blank" className="primary-btn">View CV</a>
+              <a href="/kavyacv .PES1.pdf" download="Kavyasri_Gujjula_Resume.pdf" className="primary-btn">Download CV</a>
             </div>
 
             <div className="social-links">
-              <a href="https://github.com/kavyareddy1313" target="_blank" rel="noreferrer" className="social-icon glass-panel" aria-label="GitHub">
+              <a href="https://github.com/kavyareddy1313" target="_blank" rel="noreferrer" className="social-icon github-icon glass-panel" aria-label="GitHub">
                 <Github size={20} />
               </a>
-              <a href="https://www.linkedin.com/in/kavyasri-gujjula-7762a8292/" target="_blank" rel="noreferrer" className="social-icon glass-panel" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/kavyasri-gujjula-7762a8292/" target="_blank" rel="noreferrer" className="social-icon linkedin-icon glass-panel" aria-label="LinkedIn">
                 <Linkedin size={20} />
               </a>
-              <a href="mailto:kavyasrireddy28@gmail.com" className="social-icon glass-panel" aria-label="Mail">
+              <a href="mailto:kavyasrireddy28@gmail.com" className="social-icon mail-icon glass-panel" aria-label="Mail">
                 <Mail size={20} />
               </a>
             </div>

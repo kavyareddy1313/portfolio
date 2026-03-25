@@ -98,6 +98,30 @@ const Skills = () => {
           </div>
 
           <div className="skills-group">
+            <h3 className="skills-subtitle">Currently Learning & Focusing On</h3>
+            <motion.div 
+              className="currently-learning-card glass-panel"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6 }}
+            >
+              <div className="learning-content">
+                <div className="learning-text">
+                  <h4 className="gradient-text">DevOps & Cloud Deployment</h4>
+                  <p>
+                    Having built a strong foundation in Full Stack Development, I am currently dedicating my time to mastering DevOps. I am actively deploying my applications utilizing Docker containers and managing infrastructure on AWS. My ultimate goal is to become a highly proficient DevOps Engineer, focusing on CI/CD pipelines, robust containerization, and scalable cloud architecture.
+                  </p>
+                </div>
+                <div className="learning-icons">
+                  <div className="learning-icon-wrapper"><SiDocker size={40} color="#2496ED" /></div>
+                  <div className="learning-icon-wrapper"><FaAws size={40} color="#FF9900" /></div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+          <div className="skills-group">
             <h3 className="skills-subtitle">Non-Technical Skills</h3>
             <div className="non-tech-skills">
               {nonTechnicalSkills.map((skill, index) => (

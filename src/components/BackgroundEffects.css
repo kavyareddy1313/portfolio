@@ -10,7 +10,7 @@
 .aurora-glow {
   position: absolute;
   filter: blur(120px);
-  opacity: 0.15;
+  opacity: 0.35;
   border-radius: 50%;
   mix-blend-mode: screen;
 }
@@ -45,8 +45,8 @@
 .bg-grid {
   position: absolute;
   inset: 0;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-image: linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
   background-size: 50px 50px;
   mask-image: radial-gradient(circle at center, black, transparent 80%);
 }

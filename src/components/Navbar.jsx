@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Sun, Moon } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import './Navbar.css';
 
@@ -8,13 +8,26 @@ const navLinks = [
   { name: 'About', href: '#about', color: 'nav-blue' },
   { name: 'Skills', href: '#skills', color: 'nav-green' },
   { name: 'Projects', href: '#projects', color: 'nav-orange' },
+  { name: 'Training', href: '#training', color: 'nav-cyan' },
   { name: 'Education', href: '#education', color: 'nav-pink' },
+  { name: 'Certificates', href: '#certificates', color: 'nav-yellow' },
+  { name: 'Achievements', href: '#achievements', color: 'nav-cyan' },
   { name: 'Contact', href: '#contact', color: 'nav-red' },
 ];
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark');
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(prev => prev === 'light' ? 'dark' : 'light');
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,7 +41,7 @@ const Navbar = () => {
 
   return (
     <header className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
-      <div className="container nav-content">
+      <div className="nav-container nav-content">
         <a href="#home" className="logo">
           Kavya<span className="gradient-text">sri</span>
         </a>
@@ -40,13 +53,19 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
-          <a href="/kavyacv .PES1.pdf" target="_blank" rel="noreferrer" download="Kavyasri_Gujjula_Resume.pdf" className="resume-btn glass-panel">Resume</a>
         </nav>
 
-        {/* Mobile Nav Toggle */}
-        <button className="mobile-toggle" onClick={toggleMenu} aria-label="Toggle menu">
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          {/* Theme Toggle Button */}
+          <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle theme">
+            {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
+          </button>
+
+          {/* Mobile Nav Toggle */}
+          <button className="mobile-toggle" onClick={toggleMenu} aria-label="Toggle menu">
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Nav Menu */}
@@ -69,9 +88,7 @@ const Navbar = () => {
                 {link.name}
               </a>
             ))}
-            <a href="/kavyacv .PES1.pdf" target="_blank" rel="noreferrer" download="Kavyasri_Gujjula_Resume.pdf" className="mobile-resume-btn glass-panel" onClick={() => setIsOpen(false)}>
-              Download Resume
-            </a>
+
           </motion.div>
         )}
       </AnimatePresence>

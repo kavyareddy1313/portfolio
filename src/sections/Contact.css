@@ -103,7 +103,6 @@
 
 .contact-item:hover {
   transform: translateX(10px);
-  border-color: var(--accent-primary);
 }
 
 .contact-icon {
@@ -119,9 +118,60 @@
 }
 
 .contact-item:hover .contact-icon {
-  background: var(--accent-primary);
-  box-shadow: 0 0 15px var(--accent-glow);
   transform: scale(1.1);
+}
+
+/* Unique Brand Colors */
+.contact-mail .contact-icon {
+  color: #EA4335;
+  background: rgba(234, 67, 53, 0.1);
+}
+.contact-mail:hover .contact-icon {
+  background: #EA4335;
+  color: white;
+  box-shadow: 0 0 20px rgba(234, 67, 53, 0.4);
+}
+.contact-mail:hover {
+  border-color: #EA4335;
+}
+
+.contact-phone .contact-icon {
+  color: #34A853;
+  background: rgba(52, 168, 83, 0.1);
+}
+.contact-phone:hover .contact-icon {
+  background: #34A853;
+  color: white;
+  box-shadow: 0 0 20px rgba(52, 168, 83, 0.4);
+}
+.contact-phone:hover {
+  border-color: #34A853;
+}
+
+.contact-linkedin .contact-icon {
+  color: #0A66C2;
+  background: rgba(10, 102, 194, 0.1);
+}
+.contact-linkedin:hover .contact-icon {
+  background: #0A66C2;
+  color: white;
+  box-shadow: 0 0 20px rgba(10, 102, 194, 0.4);
+}
+.contact-linkedin:hover {
+  border-color: #0A66C2;
+}
+
+.contact-github .contact-icon {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+}
+.contact-github:hover .contact-icon {
+  background: #ffffff;
+  color: black;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+.contact-github:hover {
+  border-color: #ffffff;
 }
 
 .contact-info h4 {

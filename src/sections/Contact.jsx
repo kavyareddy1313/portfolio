@@ -113,7 +113,7 @@ const Contact = () => {
             </p>
 
             <div className="contact-links">
-              <a href="mailto:kavyasrireddy28@gmail.com" className="contact-item glass-panel">
+              <a href="mailto:kavyasrireddy28@gmail.com" className="contact-item contact-mail glass-panel">
                 <div className="contact-icon">
                   <Mail size={24} />
                 </div>
@@ -123,7 +123,7 @@ const Contact = () => {
                 </div>
               </a>
 
-              <a href="tel:+918885604939" className="contact-item glass-panel">
+              <a href="tel:+918885604939" className="contact-item contact-phone glass-panel">
                 <div className="contact-icon">
                   <Phone size={24} />
                 </div>
@@ -133,7 +133,7 @@ const Contact = () => {
                 </div>
               </a>
 
-              <a href="https://www.linkedin.com/in/kavyasri-gujjula-7762a8292/" target="_blank" rel="noreferrer" className="contact-item glass-panel">
+              <a href="https://www.linkedin.com/in/kavyasri-gujjula-7762a8292/" target="_blank" rel="noreferrer" className="contact-item contact-linkedin glass-panel">
                 <div className="contact-icon">
                   <Linkedin size={24} />
                 </div>
@@ -143,7 +143,7 @@ const Contact = () => {
                 </div>
               </a>
 
-              <a href="https://github.com/kavyareddy1313" target="_blank" rel="noreferrer" className="contact-item glass-panel">
+              <a href="https://github.com/kavyareddy1313" target="_blank" rel="noreferrer" className="contact-item contact-github glass-panel">
                 <div className="contact-icon">
                   <Github size={24} />
                 </div>

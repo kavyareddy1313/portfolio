@@ -16,9 +16,10 @@
   
   --border-color: rgba(255, 255, 255, 0.1);
   --border-highlight: rgba(255, 255, 255, 0.2);
-  
   --glass-bg: rgba(10, 10, 10, 0.7);
   --glass-border: rgba(255, 255, 255, 0.05);
+  
+  --grid-color: rgba(255, 255, 255, 0.06);
 
   /* Typography */
   --font-primary: 'Outfit', sans-serif;
@@ -34,6 +35,28 @@
   --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+:root[data-theme='light'] {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f3f4f6;
+  --bg-tertiary: rgba(0, 0, 0, 0.03);
+  
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --text-tertiary: #6b7280;
+  
+  --accent-primary: #7c3aed; /* Slightly darker purple for light mode contrast */
+  --accent-secondary: #db2777; /* Slightly darker pink for contrast */
+  --accent-glow: rgba(124, 58, 237, 0.3);
+  
+  --border-color: rgba(0, 0, 0, 0.1);
+  --border-highlight: rgba(0, 0, 0, 0.15);
+  
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(0, 0, 0, 0.1);
+  
+  --grid-color: rgba(0, 0, 0, 0.06);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -46,6 +69,8 @@ html {
 
 body {
   font-family: var(--font-primary);
+  background: radial-gradient(circle at top, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+  background-attachment: fixed;
   background-color: var(--bg-primary);
   color: var(--text-primary);
   line-height: 1.6;
@@ -100,22 +125,9 @@ button {
   border-radius: 16px;
 }
 
-/* Custom scrollbar */
+/* Custom scrollbar - Hidden by request */
 ::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--bg-primary);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--bg-secondary);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--text-tertiary);
+  display: none;
 }
 
 /* Selection */

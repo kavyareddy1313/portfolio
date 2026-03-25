@@ -1,0 +1,136 @@
+.training {
+  position: relative;
+}
+
+.training-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.training-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3rem;
+  padding: 3rem;
+  max-width: 1000px;
+  width: 100%;
+  border-radius: 20px;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.training-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.2);
+  border-color: var(--accent-primary);
+}
+
+.training-image-wrapper {
+  position: relative;
+  flex: 0 0 45%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.training-cert-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-normal);
+}
+
+.training-card:hover .training-cert-img {
+  transform: scale(1.05);
+}
+
+.training-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.training-card:hover .training-overlay {
+  opacity: 1;
+}
+
+.training-view-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  background: var(--accent-primary);
+  color: white;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: transform var(--transition-fast);
+}
+
+.training-view-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px var(--accent-glow);
+}
+
+.training-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.training-title {
+  font-size: 2rem;
+  line-height: 1.2;
+  font-family: var(--font-secondary);
+}
+
+.training-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.text-accent {
+  color: var(--accent-primary);
+}
+
+.training-description {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+@media (max-width: 900px) {
+  .training-card {
+    flex-direction: column;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .training-meta {
+    align-items: center;
+  }
+  
+  .training-image-wrapper {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}

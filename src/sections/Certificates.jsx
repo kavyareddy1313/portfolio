@@ -57,7 +57,7 @@ const Certificates = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="section-title">
-            Professional <span className="gradient-text">Certifications</span>
+            <span className="gradient-text">Certifications</span>
           </h2>
           <div className="section-line"></div>
         </motion.div>
